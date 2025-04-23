@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What Are the Odds?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: antiquewhite ;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #number {
+      font-size: 3em;
+      color: #007acc;
+      margin: 20px 0;
+    }
+
+    button {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005f99;
+    }
+  </style>
+</head>
+<body>
+  <h1>What Are the Odds?</h1>
+  <p>Click the button to generate a number between 1 and 10:</p>
+  <div id="number">?</div>
+  <button onclick="generateNumber()">Try Your Luck</button>
+
+  <script>
+    function generateNumber() {
+      const randomNumber = Math.floor(Math.random() * 10) + 1;
+      document.getElementById('number').textContent = randomNumber;
+    }
+  </script>
+  <br>
+  <br>
+  <a href="index.html">Back to Home</a>
+</body>
+</html>
